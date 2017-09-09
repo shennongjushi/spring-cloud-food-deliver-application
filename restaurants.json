@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Panda Express",
+    "description":"American Chinese food",
+    "address":"2192 148th Ave NE, Redmond, WA 98052",
+    "menuItems":[
+      {
+        "id":"a1",
+        "name":"Orange Chicken",
+        "description":"Crispy chicken wok-tossed in a sweet and spicy orange sauce",
+        "price":5.0
+      },
+      {
+        "id":"a2",
+        "name":"Kung Pao Chicken",
+        "description":"A Szechwan-inspired dish with chicken, peanuts and vegetables, finished with chili peppers",
+        "price":4.5
+      },
+      {
+        "id":"a3",
+        "name":"Beijing Beef",
+        "description":"Crispy beef, bell peppers and onions in a sweet-tangy sauce",
+        "price":4.8
+      }
+    ]
+  },
+  {
+    "name": "McDonald's",
+    "description":"American hamburger and fast food restaurant chain.",
+    "address":"8515 124th Ave NE",
+    "menuItems":[
+      {
+        "id":"b1",
+        "name":"Buttermilk Crispy Chicken",
+        "description":"Made with 100% chicken breast filet and no added colors",
+        "price":4.0
+      },
+      {
+        "id":"b2",
+        "name":"Bacon Ranch Grilled Chicken Salad",
+        "description":"Chicken grilled and seasoned to perfection with ingredients like salt, garlic powder and parsley",
+        "price":5.4
+      },
+      {
+        "id":"b3",
+        "name":"Strawberry Shake",
+        "description":"Made with creamy vanilla soft serve",
+        "price":3.8
+      }
+    ]
+  }
+]

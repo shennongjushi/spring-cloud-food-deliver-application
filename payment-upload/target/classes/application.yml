@@ -1,0 +1,10 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: payment-upload
+  cloud:
+    stream:
+      bindings:
+        output: payment
+        content-type: application/json

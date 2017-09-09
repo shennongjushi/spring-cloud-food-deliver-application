@@ -1,0 +1,4 @@
+demo/rest/PaymentUploadController.class
+demo/model/PaymentStatus.class
+demo/PaymentUploaderApplication.class
+demo/model/Payment.class
