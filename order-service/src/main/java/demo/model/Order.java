@@ -13,7 +13,7 @@ import java.util.*;
 
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@Document
+@Document(collection = "orders")
 public class Order {
     @Id
     private String id;

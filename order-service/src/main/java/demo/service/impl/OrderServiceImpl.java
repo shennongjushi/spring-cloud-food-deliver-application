@@ -3,9 +3,11 @@ package demo.service.impl;
 import demo.model.Order;
 import demo.model.OrderAction;
 import demo.model.OrderRepository;
+import demo.model.OrderStatus;
 import demo.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
@@ -13,6 +15,7 @@ import java.util.List;
 public class OrderServiceImpl implements OrderService{
 
     private OrderRepository orderRepository;
+    private RestTemplate restTemplate;
 
     @Autowired
     public OrderServiceImpl(OrderRepository orderRepository){

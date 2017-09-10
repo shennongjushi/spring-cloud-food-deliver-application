@@ -20,10 +20,11 @@ public class OrderServiceController {
         this.orderService = orderService;
     }
 
-    @RequestMapping(value = "/order/all", method = RequestMethod.GET)
+    @RequestMapping(value = "/order", method = RequestMethod.GET)
     public List<Order> view(){
         return orderService.findAll();
     }
+
     @RequestMapping(value = "/order/{id}", method = RequestMethod.GET)
     public Order findOrderById(@PathVariable("id") String id) {
         return orderService.findByOrderId(id);

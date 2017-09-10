@@ -6,4 +6,4 @@ spring:
   cloud:
     stream:
       bindings:
-        input: payment
+        input: payments

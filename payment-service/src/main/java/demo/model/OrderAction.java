@@ -4,9 +4,9 @@ import lombok.Data;
 
 @Data
 public class OrderAction {
-    private long paymentId;
+    private String paymentId;
     private OrderStatus orderStatus;
-    public OrderAction(long paymentId, OrderStatus orderStatus) {
+    public OrderAction(String paymentId, OrderStatus orderStatus) {
         this.paymentId = paymentId;
         this.orderStatus = orderStatus;
     }

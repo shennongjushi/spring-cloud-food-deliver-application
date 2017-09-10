@@ -6,5 +6,5 @@ spring:
   cloud:
     stream:
       bindings:
-        output: payment
-        content-type: application/json
+        output: payments
+        #content-type: application/json

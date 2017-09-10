@@ -8,8 +8,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@Document
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
+@Document(collection = "payments")
 public class Payment {
     @Id
     private String id;
@@ -24,6 +24,17 @@ public class Payment {
     private PaymentStatus paymentStatus;
     private double price;
 
+    public Payment(){}
+
+    public Payment(PaymentRequest paymentRequest){
+        this.cardNumber = paymentRequest.getCardNumber();
+        this.name = paymentRequest.getName();
+        this.expireYear = paymentRequest.getExpireYear();
+        this.expireMonth = paymentRequest.getExpireMonth();
+        this.securityCode = paymentRequest.getSecurityCode();
+        this.orderId = paymentRequest.getOrderId();
+        this.price = paymentRequest.getPrice();
+    }
     @JsonCreator
     public Payment(@JsonProperty("cardNumber") String cardNumber,
                    @JsonProperty("name") String name,

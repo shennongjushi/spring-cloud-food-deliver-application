@@ -2,6 +2,8 @@ package demo;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import demo.model.Payment;
+import demo.model.PaymentRequest;
+import demo.model.PaymentStatus;
 import demo.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
@@ -11,7 +13,7 @@ import org.springframework.integration.annotation.ServiceActivator;
 
 import java.io.IOException;
 
-@MessageEndpoint
+//@MessageEndpoint
 @EnableBinding(Sink.class)
 public class PaymentServiceSink {
 
@@ -22,7 +24,7 @@ public class PaymentServiceSink {
 
     @ServiceActivator(inputChannel = Sink.INPUT)
     public void handlePayment(String input) throws IOException{
-       Payment payment = objectMapper.readValue(input, Payment.class);
-       paymentService.handlePayment(payment);
+        Payment payment = objectMapper.readValue(input, Payment.class);
+        paymentService.handlePayment(payment);
     }
 }
