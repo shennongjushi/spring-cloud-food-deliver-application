@@ -5,17 +5,21 @@ import demo.model.OrderAction;
 import demo.model.OrderRepository;
 import demo.model.OrderStatus;
 import demo.service.OrderService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
 @Service
+@Slf4j
 public class OrderServiceImpl implements OrderService{
 
     private OrderRepository orderRepository;
-    private RestTemplate restTemplate;
 
     @Autowired
     public OrderServiceImpl(OrderRepository orderRepository){
@@ -49,4 +53,5 @@ public class OrderServiceImpl implements OrderService{
     public List<Order> findAll(){
         return orderRepository.findAll();
     }
+
 }

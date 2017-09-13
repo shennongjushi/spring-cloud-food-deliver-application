@@ -3,15 +3,18 @@ package demo.rest;
 import demo.model.Order;
 import demo.model.OrderAction;
 import demo.service.OrderService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@Slf4j
 public class OrderServiceController {
     private OrderService orderService;
 
@@ -46,4 +49,5 @@ public class OrderServiceController {
     public void deleteAll() {
         orderService.deleteAll();
     }
+
 }
