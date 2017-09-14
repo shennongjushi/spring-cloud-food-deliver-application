@@ -79,7 +79,7 @@ copy content of order.json, modify the restaurantId and send a post request to "
 ```
 copy content of payment.json, modify the orderId and send a post request to "http://localhost:8002/api/payments"
 ```
-10.check order
+10.check order status
 ```
 send get request to "http://localhost:8004/order", check the order status, in the current validate function of payment-service, it will randomly send failure or success order status to order service.
 ```
